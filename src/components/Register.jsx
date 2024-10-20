@@ -38,7 +38,7 @@ const Register = () => {
     }
     return (
         <div>
-
+          <h1 className='text-xl md:text-2xl font-bold my-2 text-center'>Register</h1>
             <form onSubmit={handleRegister} className="card-body">
                 <div className="form-control">
                   <label className="label">

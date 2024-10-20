@@ -28,6 +28,8 @@ const Login = () => {
     return (
         <div>
 
+          <h1 className='text-xl md:text-2xl my-2 font-bold text-center'>Login</h1>
+
             <form onSubmit={handleLogin} className="card-body">
                 <div className="form-control">
                   <label className="label">
