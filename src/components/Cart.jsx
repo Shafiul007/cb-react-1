@@ -1,13 +1,14 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import CartItem from './CartItem';
+import { AuthContext } from './../Context/AuthProvider';
 
 const Cart = () => {
     const [carts,setCarts]=useState([]);
-    
+    const {user}=useContext(AuthContext);    
 
     useEffect(()=>{
-        axios.get('http://localhost:3000/products')
+        axios.get(`http://localhost:3000/products/?email=${user.email}`)
         .then(data=>{
             setCarts(data.data);
         })
